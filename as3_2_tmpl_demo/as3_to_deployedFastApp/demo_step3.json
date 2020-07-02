@@ -1,0 +1,31 @@
+// highlight to deploy app
+{
+  "name": "demo_step2b/demo_step2b",
+  "parameters": {
+      "tenant_name": "demoTen",
+      "app_name": "demoApp1",
+      "virtual_address": "100.0.0.1",
+      "port": 80,
+      "server_addresses": [
+          "100.0.0.11",
+          "100.0.0.12"
+      ]
+  }
+}
+
+
+
+{
+  "name": "examples/simple_http",
+  "parameters": {
+    "tenant_name": "ten3",
+    "application_name": "app1",
+    "virtual_port": 80,
+    "virtual_address": "10.80.0.10",
+    "server_port": 80,
+    "server_addresses": [
+      "10.80.0.21",
+      "10.80.0.22"
+    ]
+  }
+}

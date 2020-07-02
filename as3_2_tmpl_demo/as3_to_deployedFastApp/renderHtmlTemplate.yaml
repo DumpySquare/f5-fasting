@@ -1,0 +1,21 @@
+title: HelloWorldA
+description: An example template!
+view:
+  name: world
+definitions:
+  name:
+    title: Name
+    description: Who do you want to say hello to?
+    type: string
+  tenant:
+    title: Tenant
+    description: Who is this?
+    type: string
+  application:
+    title: app
+template: |
+  Hello {{name}}!
+  Tenant {{tenant}}
+  application {{application}}
+  newUers {{something}}
+  newString {{somethingElse}}

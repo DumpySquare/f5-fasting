@@ -1,0 +1,17 @@
+
+// post to deploy application
+
+{
+  "name": "examples/simple_http",
+  "params": {
+      "tenant_name": "ten3",
+      "application_name": "app1",
+      "virtual_port": 80,
+      "virtual_address": "10.80.0.10",
+      "server_port": 80,
+      "server_addresses": [
+          "10.80.0.21",
+          "10.80.0.22"
+      ]
+  }
+}

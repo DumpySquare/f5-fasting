@@ -1,0 +1,9 @@
+definitions:
+  something_var:
+  another_var:
+  secret_var:
+    title: Secret
+    description: This will show up as a password field
+    format: password
+template: |
+  {{secret_var}}

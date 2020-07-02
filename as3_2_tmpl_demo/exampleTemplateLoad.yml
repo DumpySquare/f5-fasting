@@ -1,0 +1,12 @@
+view:
+  message: Hello!
+definitions:
+  body:
+    template:
+      <body>
+        <h1>{{message}}</h1>
+      </body>
+template: |
+  <html>
+    {{> body}}
+  </html>

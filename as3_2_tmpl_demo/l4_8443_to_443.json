@@ -1,0 +1,51 @@
+// post to deploy application
+
+{
+  "name": "examples/simple_http",
+  "parameters": {
+    "tenant_name": "ten3",
+    "application_name": "app1",
+    "virtual_port": 80,
+    "virtual_address": "10.80.0.10",
+    "server_port": 80,
+    "server_addresses": [
+      "10.80.0.21",
+      "10.80.0.22"
+    ]
+  }
+}
+
+
+{
+  "class": "ADC",
+  "schemaVersion": "3.0.0",
+  "{{tenant_name}}": {
+    "class": "Tenant",
+    "{{app_name}}": {
+      "class": "Application",
+      "template": "l4",
+      "serviceMain": {
+        "class": "Service_L4",
+        "virtualAddresses": [
+          "{{virtual_address}}"
+        ],
+        "virtualPort": 8443,
+        "pool": "{{app_name}}_mgmt_tcp443_pool"
+      },
+      "{{app_name}}_mgmt_tcp443_pool": {
+        "class": "Pool",
+        "monitors": [
+          "https"
+        ],
+        "members": [
+          {
+            "servicePort": 443,
+            "serverAddresses": [
+              "10.200.244.100"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
