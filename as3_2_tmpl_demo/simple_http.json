@@ -1,0 +1,56 @@
+{
+    "title": "examples/simple_http",
+    "description": "A simple HTTP application with load balancing. Provide a Virtual IP address and port\n  along with a list of HTTP server IP addresses.",
+    "definitions": {},
+    "typeDefinitions": {},
+    "_parametersSchema": {
+        "type": "object",
+        "properties": {
+            "tenant_name": {
+                "type": "string",
+                "default": ""
+            },
+            "application_name": {
+                "type": "string",
+                "default": ""
+            },
+            "virtual_port": {
+                "type": "integer",
+                "default": 0
+            },
+            "virtual_address": {
+                "type": "string",
+                "default": ""
+            },
+            "server_port": {
+                "type": "integer",
+                "default": 0
+            },
+            "server_addresses": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "default": []
+            }
+        },
+        "required": [
+            "tenant_name",
+            "application_name",
+            "virtual_port",
+            "virtual_address",
+            "server_port",
+            "server_addresses"
+        ]
+    },
+    "target": "as3",
+    "templateText": "{{!\n  A simple HTTP application with load balancing. Provide a Virtual IP address and port\n  along with a list of HTTP server IP addresses.\n}}\n{\n  \"class\": \"ADC\",\n  \"schemaVersion\": \"3.0.0\",\n  \"{{tenant_name}}\": {\n    \"class\": \"Tenant\",\n    \"{{application_name}}\": {\n      \"class\": \"Application\",\n      \"template\": \"http\",\n      \"serviceMain\": {\n        \"class\": \"Service_HTTP\",\n        \"virtualPort\": {{virtual_port::integer}},\n        \"virtualAddresses\": [\"{{virtual_address}}\"],\n        \"pool\": \"{{application_name}}_web_pool\"\n      },\n      \"{{application_name}}_web_pool\": {\n        \"class\": \"Pool\",\n        \"monitors\": [\n          \"http\"\n        ],\n        \"members\": [\n          {\n            \"servicePort\": {{server_port::integer}},\n            \"serverAddresses\": {{server_addresses::array}}\n          }\n        ]\n      }\n    }\n  }\n}\n",
+    "defaultParameters": {},
+    "sourceType": "MST",
+    "sourceText": "{{!\n  A simple HTTP application with load balancing. Provide a Virtual IP address and port\n  along with a list of HTTP server IP addresses.\n}}\n{\n  \"class\": \"ADC\",\n  \"schemaVersion\": \"3.0.0\",\n  \"{{tenant_name}}\": {\n    \"class\": \"Tenant\",\n    \"{{application_name}}\": {\n      \"class\": \"Application\",\n      \"template\": \"http\",\n      \"serviceMain\": {\n        \"class\": \"Service_HTTP\",\n        \"virtualPort\": {{virtual_port::integer}},\n        \"virtualAddresses\": [\"{{virtual_address}}\"],\n        \"pool\": \"{{application_name}}_web_pool\"\n      },\n      \"{{application_name}}_web_pool\": {\n        \"class\": \"Pool\",\n        \"monitors\": [\n          \"http\"\n        ],\n        \"members\": [\n          {\n            \"servicePort\": {{server_port::integer}},\n            \"serverAddresses\": {{server_addresses::array}}\n          }\n        ]\n      }\n    }\n  }\n}\n",
+    "sourceHash": "66decdd5532cfc6ab33d8072fd2e0ded8ff9d4c37c786f6e8f1a68253134958a",
+    "_oneOf": [],
+    "_allOf": [],
+    "_anyOf": [],
+    "contentType": "text/plain"
+}

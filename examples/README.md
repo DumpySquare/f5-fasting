@@ -1,0 +1,63 @@
+
+
+## Example POSTs to deploy example FAST templates
+
+Highlight the each json object in the vscode f5-fast extension, then `F1`, and select `F5-Fast: Deploy Fast App` to deploy the application
+
+## simple_http
+```
+{
+  "name": "examples/simple_http",
+  "parameters": {
+    "tenant_name": "examplesTen",
+    "application_name": "simpleHTTP",
+    "virtual_port": 80,
+    "virtual_address": "10.91.0.10",
+    "server_port": 8080,
+    "server_addresses": [
+      "10.91.0.11",
+      "10.91.0.12"
+    ]
+  }
+}
+```
+
+## simple_http 2 - just a double of above
+{
+  "name": "examples/simple_http",
+  "parameters": {
+    "tenant_name": "examplesTen",
+    "application_name": "simpleHTTP2",
+    "virtual_port": 80,
+    "virtual_address": "10.91.0.15",
+    "server_port": 8080,
+    "server_addresses": [
+      "10.91.0.16",
+      "10.91.0.17"
+    ]
+  }
+}
+
+## simple_https
+** still trying to get this working**
+```
+{
+  "name": "examples/simple_https",
+  "parameters": {
+    "tenant_name": "examplesTen",
+    "application_name": "simpleHTTPS",
+    "virtual_port": 80,
+    "virtual_address": "10.91.0.20",
+    "server_port": 8080,
+    "server_addresses": [
+      "10.91.0.21",
+      "10.91.0.22"
+    ],
+    "certificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlDbkRDQ0FnV2dBd0lCQWdJSkFKNW4yYjBPQ0Vqd01BMEdDU3FHU0liM0RRRUJDd1VBTUdjeEN6QUpCZ05WQkFZVEFsVlRNUk13RVFZRFZRUUlEQXBYWVhOb2FXNW5kRzl1TVJBd0RnWURWUVFIREFkVFpXRjBkR3hsTVJRd0VnWURWUVFLREF0bU5WOU9aWFIzYjNKcmN6RWJNQmtHQTFVRUF3d1NjMkZ0Y0d4bExtVjRZVzF3YkdVdWJtVjBNQjRYRFRFM01URXlOakU1TlRBeU5Gb1hEVEU0TURJeU5URTVOVEF5TkZvd1p6RUxNQWtHQTFVRUJoTUNWVk14RXpBUkJnTlZCQWdNQ2xkaGMyaHBibWQwYjI0eEVEQU9CZ05WQkFjTUIxTmxZWFIwYkdVeEZEQVNCZ05WQkFvTUMyWTFYMDVsZEhkdmNtdHpNUnN3R1FZRFZRUUREQkp6WVcxd2JHVXVaWGhoYlhCc1pTNXVaWFF3Z1o4d0RRWUpLb1pJaHZjTkFRRUJCUUFEZ1kwQU1JR0pBb0dCQUxFc3VYbVNYVlFwWWpyWlBXK1dpVEJqbjQ5MW13WllUN1E5MlYxSGxTQnRNNldkV2xLMWFaTjVzb3ZmS3RPWDdZcm04eGErZTRvL3pKMlFZTHl5djVPK3QyRUdOLzRxVUVqRUFQWTltd0pkZnpSUXk2SHl6bTg0SjBRa1R1VUovRWpOdVBqaTNEMFFKUkFMVVR6dTFVcXFEQ0V0aU45T0d5WEVraDd1dmI3QkFnTUJBQUdqVURCT01CMEdBMVVkRGdRV0JCU1ZIUE5yR1dyald5WnZja1F4RllXTzU5RlJGakFmQmdOVkhTTUVHREFXZ0JTVkhQTnJHV3JqV3ladmNrUXhGWVdPNTlGUkZqQU1CZ05WSFJNRUJUQURBUUgvTUEwR0NTcUdTSWIzRFFFQkN3VUFBNEdCQUplSjlTRWNrRXdQaGtYT20rSXVxZmJVUy9SY3ppaWZCQ1RtVnlFK0ZhL2o5cEtTWVRnaUVCTmRiSmVCRWErZ1BNbFF0YlY3WTJkeThUS3gvOGF4VkJIaVhDNWdlRE1MN2NheE9yQXlIWUJwbng2OTB4SlRoNU9JT1JCQk0vYS9OdmFSK1AzQ29WZWJyL05QUmg5b1JOeG5udG5xdnFEN1NXMFUzWlBlM3RKY1xuLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQ==",
+    "private_key": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLVxuUHJvYy1UeXBlOiA0LEVOQ1JZUFRFRFxuREVLLUluZm86IEFFUy0yNTYtQ0JDLEQ4RkZDRTZCMjU1NjAxNTg3Q0I1NEVDMjlCNzM3RDMxXG5cbmt2NEZjM0puMFVqa2oweVJqdCtnUVFmQkxTTkYyYVJMVUVOWG5scjdYcHpxdTBBaHIzalMxYkFBbmQ4SVduc1JcbnlJTHFWbUtzWUYyRG9IaDB0V2lFQVE3L3kvZmU1RFRGaEs3TjRXbWw2a3AyeVZNa1A2S0M0c3N5WVB3MjdraktcbkRCd0JaNU84SW9lajA4QTVzZ3NMQ21nbGJtdFNQSEpVbjE0cFFuTVRtTE9wRXRPc3U2UysyaWJQZ1NOcGRnMGJcbkNBSk5HL0tIZStWa3g1OXFORHlEZUtiN0ZaT2xzWDMwK3k2N3pVcTlHUXFKRUR1eXNQSjJCVU5QMElKWEFqc3RcbkZJdDFxTm9aZXcrNUtEWXM3dS9sUHhjTUdUaXJVaGdJODRKeTRXY0R2U09zUC90S2x4ajA0VGJJRTNlcG1TS3lcbitUaWhIa3dZN25nSUd0Y20zU2ZxazVqejJSWG9qMS9BYzNTVzhrVlRZYU9Vb2dCaG43ekFxNFdqdTZFdDRoUUdcblJHYXBzSnAxYUNlWi9hNFJDRFR4c3BjS29NYVJhOTcvVVJRYjBoQlJHeDNER1VoenBtWDl6bDdKSTJYYTVEM1Jcbm1kQlh0akxLWUpUZElNZGQyN3ByQkVLaE1VcGFlMnJ6NU13NEo5MDd3WmVCcS93dSt6cDhMQW5lY2ZUZTJuR1lcbkUzMngxVTdnU0VkWU9HcW53eHNPZXhiMWpLZ0NhNjdOdzlUbWNNUFY4em1IN1I5cWR2Z3hBYkF0d0JsMUY5T1NcbmZjR2FDN2VwZjFBakpMdGFYN2tyV216Z0FTSGwyOFluaDlsbUdNZHYrNVFZTVp2S0cwTE9nL24zbTh1SjZzS3lcbkl6enZhSnN3d24wajVQNStjenlvVjVDdnZkQ2ZLbk5iKzNqVUVOOEkwUFB3akJHS3I0QjFvandob2dUTTI0OFZcbkhSNjlENlR4RlZNZkdweUpoQ1BrYkdFR2JwRXBjZmZwZ0t1Qy9tRXRNcXlEUVhKTmFWNUhPNkhnQUo5RjFQNnZcbjVlaEhIVE1SdnpDQ0Zpd25kSGRsTVhVanFTTmp3dzZtZTZkcjZMaUFQYmVqZHpoTDJ2V3gxWXFlYk9jd1F4M0dcbi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0t"
+  }
+}
+```
+
+
+
