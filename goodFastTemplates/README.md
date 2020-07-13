@@ -41,7 +41,7 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
 ```
 
 
-### app3.yml - deploys simple_udp_defaults.yml template
+## app3.yml - deploys simple_udp_defaults.yml template
 - deploys all defaults defined within the parameters of the template
 ```
 {
@@ -50,13 +50,30 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
 }
 ```
 
-### app3.yml - deploys defaults, but same tenant as other examples
+## app3.yml - deploys defaults, but same tenant as other examples
 
 Will conflict with above deployment since the pool members will be the same, but wanted to demonstrat that all parameters that have defaults are optional and can be updated as needed
 
 ```
 {
   "name": "goodFastTemplates/app3",
+  "parameters": {
+    "tenant_name": "fastTen1"
+  }
+}
+```
+
+## app4.yml - same as above, but no schema reference (types.json)
+
+This template is able to be uploaded as a single file (right click within vscode).  
+
+This will probably end up being the recommended path since yaml is easier to read/type and it also provides good flexibility for defining the gui.  
+
+TO PUT THIS ANOTHER WAY, WRITE ALL FAST TEMPLATES IN YAML!!! - will document this soon!
+
+```
+{
+  "name": "goodFastTemplates/app4",
   "parameters": {
     "tenant_name": "fastTen1"
   }

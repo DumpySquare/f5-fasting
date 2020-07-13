@@ -3,10 +3,10 @@ description: Simple UDP load balancer using the same port on client and server s
 parameters:
   tenant_name: foo
   application_name: defaultsUDP_5555
-  virtual_address: 192.0.2.1
+  virtual_address: 192.50.2.1
   virtual_port: 5555
   server_addresses:
-    - 192.0.2.2
+    - 192.50.2.2
   service_port: 5555
 template: |
   {
@@ -22,7 +22,7 @@ template: |
           "virtualAddresses": [
             "{{virtual_address}}"
           ],
-          "virtualPort": {{virtual_port:types:port}},
+          "virtualPort": {{virtual_port::integer}},
           "pool": "{{application_name}}_Pool1"
         },
         "{{application_name}}_Pool1": {
@@ -33,7 +33,7 @@ template: |
           "members": [
             {
               "serverAddresses": {{server_addresses::array}},
-              "servicePort": {{service_port:types:port}}
+              "servicePort": {{service_port::integer}}
             }
           ]
         }
