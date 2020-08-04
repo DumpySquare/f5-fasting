@@ -1,12 +1,12 @@
 
-# Make HTTPS Request documentation and examples
+# Make HTTP/S Request documentation and examples
 
-This function provides the necessary flexbility to make any API call to a connected device
+This function provides the necessary flexbility to make any API call to ANYthing
 
 Highlight text, right-click, select: `Make HTTPS Request`
 
 
-## Calls without "host" parameter
+## Calls without "http" in uri/url
 This assumes the request is intented for the currently connected device, of which host details are already known.
 
 ### simple uri as string
