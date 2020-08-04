@@ -6,39 +6,67 @@ This function provides the necessary flexbility to make any API call to ANYthing
 Highlight text, right-click, select: `Make HTTPS Request`
 
 
-## Calls without "http" in uri/url
+## Calls without "http" in url
 This assumes the request is intented for the currently connected device, of which host details are already known.
 
-### simple uri as string
+K13225405: Common iControl REST API command examples
+- https://support.f5.com/csp/article/K13225405
+
+### simple url as string
 ```
 /mgmt/tm/sys/clock
 ```
 
-### simple uri in yaml format
+### simple url in yaml format
 ```
-uri: /mgmt/tm/sys/clock
+url: /mgmt/tm/sys/clock
 ```
 
-### simple uri in json format
+### simple url in json format
 ```
 {
-  "uri": "/mgmt/tm/sys/clock"
+  "url": "/mgmt/tm/sys/clock"
 }
 ```
 
-### uri post in yaml
+### list vlans
 ```
-uri: /mgmt/shared/authn/login
+/mgmt/tm/net/vlan/
+```
+
+
+
+### url post in yaml
+```
+url: /mgmt/shared/authn/login
 method: POST
 body:
     username: user1
     password: dobgispet
 ```
 
-### uri post in json
+### url post in yaml
+```
+url: /mgmt/tm/sys/config
+method: POST
+body:
+    command: save
+```
+
+### list sys options
+```
+/mgmt/tm/sys/
+```
+
+### list sys ucs
+```
+/mgmt/tm/sys/ucs/
+```
+
+### url post in json
 ```
 {
-  "uri": "/mgmt/shared/authn/login",
+  "url": "/mgmt/shared/authn/login",
   "method": "POST",
   "body": {
       "username": "todai",
@@ -51,7 +79,7 @@ body:
 
 ## Calls for outside f5
 
-The command will detect if the uri has "http", if found, it considers it a fully qualified request destined for something outside of a device defined within the extension
+The command will detect if the url has "http", if found, it considers it a fully qualified request destined for something outside of a device defined within the extension
 
 Default HTTP method = GET
 
@@ -64,12 +92,12 @@ https://api.chucknorris.io/jokes/random
 
 ### simple get in yaml
 ```
-uri: https://api.chucknorris.io/jokes/random
+url: https://api.chucknorris.iob/jokes/randoms
 ```
 
 ### simple POST in yaml
 ```
-uri: https://postman-echo.com/post
+url: https://postman-echo.com/postb
 method: POST
 data: 'hi'
 ```
@@ -77,7 +105,7 @@ data: 'hi'
 ### simple POST in json
 ```
 {
-    "uri": "https://postman-echo.com/post",
+    "url": "https://postman-echo.com/post",
     "method": "POST",
     "data": "hi"
 }
