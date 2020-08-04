@@ -26,7 +26,7 @@ uri: /mgmt/tm/sys/clock
 }
 ```
 
-### uri post in json
+### uri post in yaml
 ```
 uri: /mgmt/shared/authn/login
 method: POST
@@ -62,19 +62,19 @@ data, or body, must also include 'POST' HTTP method
 https://api.chucknorris.io/jokes/random
 ```
 
-### simple get broken out in yaml
+### simple get in yaml
 ```
 uri: https://api.chucknorris.io/jokes/random
 ```
 
-### simple POST broken out in yaml
+### simple POST in yaml
 ```
 uri: https://postman-echo.com/post
 method: POST
 data: 'hi'
 ```
 
-### simple POST broken out in yaml
+### simple POST in json
 ```
 {
     "uri": "https://postman-echo.com/post",
