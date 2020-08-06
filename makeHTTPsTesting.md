@@ -5,12 +5,20 @@ This function provides the necessary flexbility to make any API call to ANYthing
 
 Highlight text, right-click, select: `Make HTTPS Request`
 
+## links
+
+- [TO MAIN vscode-f5-fast REPO](https://github.com/DumpySquare/vscode-f5-fast)
+
 
 ## Calls without "http" in url
 This assumes the request is intented for the currently connected device, of which host details are already known.
 
 K13225405: Common iControl REST API command examples
 - https://support.f5.com/csp/article/K13225405
+
+How to use postman api for external tests like post
+- https://docs.postman-echo.com/?version=latest
+
 
 ### simple url as string
 ```
@@ -92,14 +100,21 @@ https://api.chucknorris.io/jokes/random
 
 ### simple get in yaml
 ```
-url: https://api.chucknorris.iob/jokes/randoms
+url: https://api.chucknorris.io/jokes/random
+```
+
+### simple get in yaml - shows broken destination
+```
+url: https://broken.extra.io/whah
 ```
 
 ### simple POST in yaml
 ```
-url: https://postman-echo.com/postb
+url: 'https://postman-echo.com/post'
 method: POST
-data: 'hi'
+data:
+  hi: yo
+
 ```
 
 ### simple POST in json
@@ -107,7 +122,9 @@ data: 'hi'
 {
     "url": "https://postman-echo.com/post",
     "method": "POST",
-    "data": "hi"
+    "data": {
+        "hi": "yo"
+    }
 }
 ```
 
