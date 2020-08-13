@@ -1,0 +1,120 @@
+#Test template used for iApp testing
+sys application template /Common/Aicall_curl_v0.1111 {
+    actions {
+        definition {
+            html-help {
+                <p><b>VDI iApp Template</b></p>
+
+                <p>For improved readability, click the <b>Launch</b> button to view the Help guidelines in a resizable window.</p>
+
+                <p>This template creates stuff. <br> Before you start: </p>
+                <ul>
+                    <li>list item 1</li>
+                    <li>list item 2</li>
+                    <li>list item 3</li>
+                    <li>list item 4</li>
+                    </ul>
+                <p>  Another paragraph </p>
+            }
+            implementation {
+                ###<--implementation start--->###
+                package require iapp 1.0.0
+                iapp::template start
+
+                # assign app name that user typed in as a variable
+                set app $tmsh::app_name
+
+                set cdate [clock format [clock seconds] -format "%Y-%m-%d:%H:%M"]
+
+                # all "puts" statements log iapp execution stuff to /var/tmp/scriptd.out
+                puts "Executing ${app} iApp - ${cdate}"
+
+                # tmsh::log statements log to /var/log/ltm
+                tmsh::log "Executing ${app} iApp - ${cdate}"
+
+
+                set script {
+                    set cdate [clock format [clock seconds] -format "%Y-%m-%d:%H:%M"]
+                    set cmd "curl -s <CALL>"
+                    tmsh::log "--- curl icall example $cdate ---"
+                    tmsh::log "--- $cmd ---"
+                    set response [exec bash -c $cmd]
+                    if {[catch {set response [exec bash -c $cmd]} result]} {
+                        tmsh::log "Ran: $cmd - error: $result"
+                    } else {
+                        tmsh::log "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+                        tmsh::log "$result"
+                        tmsh::log "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+                    }
+                }
+                # string map for adding variables to icall script
+                set curl_script [string map [list <CALL> $::main__call APP ${app}] $script]
+                # issue command to create icall script
+                set curl_update_script [iapp::conf create sys icall script ${app}_curl_script definition \{ $curl_script \}]
+                # create icall hanlder to execute icall script
+                set curl_update_handler [iapp::conf create sys icall handler periodic ${app}_curl_update_handler \{ \
+                    interval $::main__update_frequency \
+                    first-occurrence $cdate:00 \
+                    script $curl_update_script \}]
+
+
+                iapp::template stop
+                #####################################################
+                #####################################################
+                #####################################################
+                ###<--implementation end--->###
+            }
+            macro {
+            }
+            presentation {
+                section options {
+                    choice display_help display "xlarge" default "hide"
+                    optional ( options.display_help == "full" ) {
+                        message display_help_max
+                    }
+                }
+
+                section main {
+                    message hello
+                    string call default "https://api.chucknorris.io/jokes/random | jq .value" required display "xxlarge"
+                    string update_frequency default "30" required validator "NonNegativeNumber"
+                    optional ( options.display_help == "full" ) { message update_frequency_extra }
+                }
+
+                section todo {
+                    message what
+                    optional ( options.display_help == "full" ) {
+                        message todo1
+
+                    }
+                }
+
+                text {
+                    main "Demo iCall iapp"
+                    main.hello "Introduction" "This iapp is used to demontrate iCall management in an iApp"
+                    todo "TODO list"
+                    todo.what "" "List of 'to do' items so they can be tracked - Show inline help for more details"
+                    todo.todo1 "todo 1" "things to do to make do do doooo"
+
+                    options "Template Options"
+                    options.display_help "Do you want to see inline help or additional information?" {
+                        "Yes, show inline help" => "full",
+                        "No, do not show inline help" => "hide"
+                    }
+                    options.display_help_max "" "Inline help is available to provide contextual descriptions to aid in the completion of this configuration.  Select to show or hide the inline help in this template. Important notes and warnings are always visible, no matter which selection you make here."
+                    main.update_frequency_extra "How often to update SRV pools?" "^^^Provide value in seconds: 300=5m, 3600=1hr, 28800=8hr"
+                }
+            }
+            role-acl none
+            run-as none
+        }
+    }
+    description none
+    ignore-verification false
+    requires-bigip-version-max none
+    requires-bigip-version-min 14.1.0
+    requires-modules { ltm }
+    signing-key none
+    tmpl-checksum none
+    tmpl-signature none
+}

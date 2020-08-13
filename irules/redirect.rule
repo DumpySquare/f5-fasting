@@ -1,0 +1,8 @@
+### default 80->443 redirect irule for testing
+# another comment
+
+when HTTP_REQUEST {
+    HTTP::redirect https://[getfield [HTTP::host] ":" 1][HTTP::uri]
+}
+
+### end code comment

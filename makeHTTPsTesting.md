@@ -20,6 +20,8 @@ How to use postman api for external tests like post
 - https://docs.postman-echo.com/?version=latest
 
 
+https://www.npmjs.com/package/axios
+
 ### simple url as string
 ```
 /mgmt/tm/sys/clock
@@ -51,6 +53,7 @@ method: POST
 body:
     username: user1
     password: dobgispet
+
 ```
 
 ### url post in yaml
@@ -74,13 +77,23 @@ body:
 ### url post in json
 ```
 {
-  "url": "/mgmt/shared/authn/login",
-  "method": "POST",
-  "body": {
-      "username": "todai",
-      "password": "dobgispet"
-  }
+    "url": "/mgmt/shared/authn/login",
+    "method": "POST",
+    "body": {
+        "username": "todai",
+        "password": "dobgispet"
+    }
 }
+```
+
+### tmsh save sys config (all partitions)
+```
+<POST> /mgmt/tm/sys/config  -d '{"command":"save","partition":"all"}'
+
+url: /mgmt/tm/sys/config
+method: POST
+body:
+  command: save
 ```
 
 ---
@@ -88,6 +101,9 @@ body:
 ## Calls for outside f5
 
 The command will detect if the url has "http", if found, it considers it a fully qualified request destined for something outside of a device defined within the extension
+
+This is based off of NodeJS AXIOS request
+https://www.npmjs.com/package/axios#request-config
 
 Default HTTP method = GET
 
@@ -125,6 +141,19 @@ data:
     "data": {
         "hi": "yo"
     }
+}
+```
+
+
+### raw get to external F5 using basic auth - DEV
+```
+{
+  "url": "https://192.168.200.131/mgmt/tm/sys/ntp",
+  "auth": {
+      "username": "admin",
+      "password": "yayPassword!",
+      "sendImmediately": "true"
+  }
 }
 ```
 
