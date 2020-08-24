@@ -8,11 +8,11 @@ parameters:
   server_addresses:
     - 192.50.2.2
   service_port: 5555
-definitions:
-  tenant_name:
-    title: Tenant Name
-    type: string
-    description: partition on bigip
+# definitions:
+#   tenant_name:
+#     title: Tenant Name
+#     type: string
+#     description: partition on bigip
 template: |
   {
     "class": "ADC",
