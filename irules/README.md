@@ -24,25 +24,26 @@
 
 
 ### test irule
+highlight -> right-click -> Make HTTP Request
 ```
-##########################
-### test irule
-
-#https://devcentral.f5.com/s/articles/20-lines-or-less-11
+ltm rule /Common/A_testRedirect_rule2 {
+### default 80->443 redirect irule for testing
 
 when HTTP_REQUEST {
-  # decode original URI.
-  set tmpUri [HTTP::uri]
-  set uri [URI::decode $tmpUri]
-
-  # repeat decoding until the decoded version equals the previous value.
-  while { $uri ne $tmpUri } {
-    set tmpUri $uri
-    set uri [URI::decode $tmpUri]
-  }
-  HTTP::uri $uri
-
-  log local0. "Original URI: [HTTP::uri]"
-  log local0. "Fully decoded URI: $uri"
+    HTTP::redirect https://[getfield [HTTP::host] ":" 1][HTTP::uri]
+}
 }
 ```
+
+### get irule
+/mgmt/tm/ltm/rule
+/mgmt/tm/ltm/rule/~Common~A_testRedirect_rule
+
+### delete irule
+url: /mgmt/tm/ltm/rule/~Common~A_testRedirect_rule
+method: DELETE
+
+
+### create irule
+url: /mgmt/tm/ltm/rule
+method: DELETE

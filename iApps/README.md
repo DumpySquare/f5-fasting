@@ -3,12 +3,6 @@
 
 
 
-
-
-
-
-
-
 # iApp APIs
 
 ### list application options
@@ -43,6 +37,26 @@ https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-se
 
 
 
+### redeploy existing iApp-App
+*** This is for schenarios where the template has been updated and the app needs to be re-deployed to get the template changes applied to the running app ***
+```
+{
+    "url": "/mgmt/tm/sys/application/service/~Common~tstApp.app~tstApp",
+    "method": "PATCH",
+    "body": {
+        "execute-action": "definition"
+    }
+}
+```
+
+
+### DELETE existing iApp-App
+```
+{
+    "url": "/mgmt/tm/sys/application/service/~Common~tstApp.app~tstApp",
+    "method": "DELETE"
+}
+```
 
 ### create an iapp template API
 
