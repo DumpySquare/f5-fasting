@@ -44,6 +44,11 @@ url: /mgmt/tm/sys/clock
 /mgmt/tm/net/vlan/
 ```
 
+### list nodes
+```
+/mgmt/tm/ltm/node
+```
+
 
 
 ### url post in yaml
@@ -130,7 +135,6 @@ url: 'https://postman-echo.com/post'
 method: POST
 data:
   hi: yo
-
 ```
 
 ### simple POST in json

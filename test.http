@@ -1,0 +1,10 @@
+
+
+
+###
+GET https://api.github.com/repos/F5Networks/f5-telemetry-streaming/releases
+
+
+
+###
+GET https://api.chucknorris.io/jokes/random
