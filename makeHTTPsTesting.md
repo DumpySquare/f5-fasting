@@ -163,5 +163,37 @@ data:
 
 
 
+### raw get to external F5 using basic auth - DEV
+```
+{
+  "url": "https://192.168.200.131/mgmt/tm/sys/ntp",
+  "data": {
+      "username": "admin",
+      "password": "yayPassword!",
+      "sendImmediately": "true"
+  }
+}
+```
 
 
+### get f5 auth token
+```
+{
+  "url": "https://10.200.244.110:8443/mgmt/shared/authn/login",
+  "method": "POST",
+  "data": {
+    "username":"admin",
+    "password":"passss!"
+  }
+}
+```
+
+
+### get f5 auth token
+```
+url: 'https://10.200.244.110:8443/mgmt/tm/auth/source'
+headers:
+    Content-Type: application/json
+    X-F5-Auth-Token: ZM2MKZCDJ5FSDIPDVAVQIW7IBQ
+
+```
