@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "class": "Device",
+  "async": true,
+  "label": "sweet schema label...",
+  "Common": {
+      "class": "Tenant",
+      "guestUser": {
+          "class": "User",
+          "userType": "regular",
+          "partitionAccess": {
+              "Common": {
+                  "role": "guest"
+              }
+          },
+          "shell": "tmsh",
+          "keys": []
+      },
+      "mySystem": {
+          "class": "System",
+          "cliInactivityTimeout": 12000,
+          "consoleInactivityTimeout": 12000,
+          "autoPhonehome": false
+      }
+  }
+}

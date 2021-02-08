@@ -1,45 +1,40 @@
 
-
-
-
-
 # iApp APIs
 
-### list application options
+## list application options
+
 /mgmt/tm/sys/application
 
-### list deployed iApp applications
+## list deployed iApp applications
+
 /mgmt/tm/sys/application/service
 
-### list iapp templates
+## list iapp templates
+
 /mgmt/tm/sys/application/template
-
-
 
 >When trying to create or update an instance of an iApp via REST, you will get error messages in the HTTP response if your POST is unsuccessful.  In addition to the HTTP payload in the response, the following debug steps can be helpful:
 `modify sys scriptd log-level debug`
-https://devcentral.f5.com/s/articles/full-examples-of-icr-for-device-and-application-deployments
-
-
+<https://devcentral.f5.com/s/articles/full-examples-of-icr-for-device-and-application-deployments>
 
 /mgmt/tm/sys/application/template/~Common~tparty_v0.1?expandSubcollections=true
 
 /mgmt/tm/sys/application/template/~Common~tparty_v0.1/actions
 /mgmt/tm/sys/application/template/~Common~tparty_v0.1/actions/definition
 
-https://devcentral.f5.com/s/articles/managing-iapp-template-files-with-icontrol
-https://devcentral.f5.com/s/articles/full-examples-of-icr-for-device-and-application-deployments
+<https://devcentral.f5.com/s/articles/managing-iapp-template-files-with-icontrol>
+<https://devcentral.f5.com/s/articles/full-examples-of-icr-for-device-and-application-deployments>
 
-https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/bigip-iapps-developer-11-4-0/2.html
+<https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/bigip-iapps-developer-11-4-0/2.html>
 
-https://clouddocs.f5.com/api/iapps/
-https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-service-from-an-iapp-template-via-tmsh
+<https://clouddocs.f5.com/api/iapps/>
+<https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-service-from-an-iapp-template-via-tmsh>
 
+## redeploy existing iApp-App
 
+***This is for schenarios where the template has been updated and the app needs to be re-deployed to get the template changes applied to the running app***
 
-### redeploy existing iApp-App
-*** This is for schenarios where the template has been updated and the app needs to be re-deployed to get the template changes applied to the running app ***
-```
+```json
 {
     "url": "/mgmt/tm/sys/application/service/~Common~tstApp.app~tstApp",
     "method": "PATCH",
@@ -49,9 +44,9 @@ https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-se
 }
 ```
 
+## DELETE existing iApp-App
 
-### DELETE existing iApp-App
-```
+```json
 {
     "url": "/mgmt/tm/sys/application/service/~Common~tstApp.app~tstApp",
     "method": "DELETE"
@@ -68,7 +63,7 @@ https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-se
 /mgmt/tm/sys/application/template/~Common~f5.ip_forwarding/actions/definition?expandSubcollections=true
 /mgmt/tm/sys/application/template/~Common~A_test1/actions/definition?expandSubcollections=true
 
-```
+```json
 {
     "url": "/mgmt/tm/sys/application/template?expandSubcollections=true",
     "method": "POST",
@@ -96,7 +91,8 @@ https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-se
     }
 }
 ```
-```
+
+```json
 {
     "url": "/mgmt/tm/sys/application/template/",
     "method": "POST",
@@ -122,9 +118,9 @@ https://devcentral.f5.com/s/question/0D51T00006i7QWZSA2/deploy-an-application-se
 }
 ```
 
-
 ### raw output from -> tmsh create sys application template test1
-```
+
+```t
 create template test1 {
     actions replace-all-with {
         definition {
@@ -148,8 +144,9 @@ create template test1 {
 }
 ```
 
-### output of -> tmsh list sys application template test1
-```
+## output of -> tmsh list sys application template test1
+
+```t
 sys application template test1 {
     actions {
         definition {

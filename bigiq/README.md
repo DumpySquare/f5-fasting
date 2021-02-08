@@ -1,10 +1,7 @@
 
+# BIGIQ test AS3 declarations
 
-
-
-### test app deploy through bigiq
-
-
+## test app deploy through bigiq
 
 {
     "class": "AS3",
@@ -76,7 +73,6 @@
 
 /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices
 
-
 /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices
 "uuid": "ae8742ff-efca-4f44-82a1-16fe5a61bfbc",
 "hostname": "coreltm01.benlab.io",
@@ -86,19 +82,19 @@
 
 ---
 
-
 /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices/1932275d-7c55-4fb4-b981-8857d20ac220
 "uuid": "1932275d-7c55-4fb4-b981-8857d20ac220",
 "hostname": "bigip-tparty05.benlab.io",
 
-
-```
-url: /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices/1932275d-7c55-4fb4-b981-8857d20ac220/
-method: patch
-body: {
-  "properties": {
-    "isRestProxyEnabled": "true"
-  }
+```t
+{
+    url: /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices/1932275d-7c55-4fb4-b981-8857d20ac220/
+    method: patch
+    body: {
+        "properties": {
+        "isRestProxyEnabled": "true"
+        }
+    }
 }
 
 
@@ -107,17 +103,17 @@ body: {
 
 "uuid": "d4f9b652-73cf-4454-895b-c5754383db6b",
 "hostname": "devCloud01.benlab.io",
-```
-url: /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices/d4f9b652-73cf-4454-895b-c5754383db6b/
-method: patch
-body: {
-  "properties": {
-    "isRestProxyEnabled": "true"
-  }
+
+```t
+{
+    url: /mgmt/shared/resolver/device-groups/cm-bigip-allBigIpDevices/devices/d4f9b652-73cf-4454-895b-c5754383db6b/
+    method: patch
+    body: {
+    "properties": {
+        "isRestProxyEnabled": "true"
+        }
+    }
 }
 ```
-
-
-
 
 It seems that the important message in step 7 of post discovery enablement is not necessarily true.  The example uses the PATCH method the file it references only has the new property.  Furthermore, i think it's a bit embarrassing that bigiq doesn't provide a way to do this natively, but if we are gonna go through the trouble of a document like this to get around it, I suggest that we just provide a script to do it for our customers.  

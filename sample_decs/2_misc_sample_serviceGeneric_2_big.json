@@ -1,0 +1,124 @@
+{
+    "class": "ADC",
+    "schemaVersion": "3.5.0",
+    "id": "Service_Generic",
+    "Sample_misc_02_big": {
+        "class": "Tenant",
+        "inTouch_app": {
+            "class": "Application",
+            "template": "generic",
+            "inTouchcore.app.io_t80_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 80
+            },
+            "inTouchcore.app.io_t8080_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8080
+            },
+            "inTouchcore.app.io_t8081_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8081
+            },
+            "inTouchcore.app.io_t8082_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8082
+            },
+            "inTouchcore.app.io_t8083_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8083
+            },
+            "inTouchcore.app.io_t8084_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8084
+            },
+            "inTouchcore.app.io_t8085_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8085
+            },
+            "inTouchcore.app.io_t8086_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8086
+            },
+            "inTouchcore.app.io_t443_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 443
+            },
+            "inTouchcore.app.io_t8443_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8443
+            },
+            "inTouchcore.app.io_t8444_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8444
+            },
+            "inTouchcore.app.io_t8445_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8445
+            },
+            "inTouchcore.app.io_t8446_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8446
+            },
+            "inTouchcore.app.io_t8447_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8447
+            },
+            "inTouchcore.app.io_t8448_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8448
+            },
+            "inTouchcore.app.io_t8449_vs": {
+                "class": "Service_Generic",
+                "virtualAddresses": [
+                    "192.0.2.140"
+                ],
+                "virtualPort": 8449
+            }
+        }
+    }
+}

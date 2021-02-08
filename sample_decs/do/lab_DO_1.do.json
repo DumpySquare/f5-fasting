@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/F5Networks/f5-declarative-onboarding/master/src/schema/latest/base.schema.json",
+  "schemaVersion": "1.0.0",
+  "class": "Device",
+  "async": true,
+  "label": "vsCode f5 extension sample dec for declarative onboarding",
+  "Common": {
+      "class": "Tenant",
+      "guestUser": {
+          "class": "User",
+          "userType": "regular",
+          "partitionAccess": {
+              "Common": {
+                  "role": "guest"
+              }
+          },
+          "shell": "tmsh",
+          "keys": []
+      },
+      "mySystem": {
+          "class": "System",
+          "cliInactivityTimeout": 12000,
+          "consoleInactivityTimeout": 12000,
+          "autoPhonehome": false
+      }
+  }
+}

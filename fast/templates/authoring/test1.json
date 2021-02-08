@@ -1,0 +1,10 @@
+{
+  "$schema": "https://github.com/f5devcentral/f5-fast-core/blob/master/schema/template.json",
+  "title": "test template 1",
+  "description": "exploring template authoring",
+  "parameters": {
+      "p1": "default_p1",
+      "p2": "default_p2"
+  },
+  "template": "{\n  \"class\": \"ADC\",\n  \"schemaVersion\": \"3.0.0\",\n  \"name\": {{p1}},\n  \"thing\": {{p2}}\n}\n"
+}

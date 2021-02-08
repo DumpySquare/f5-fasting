@@ -1,0 +1,33 @@
+{
+  "class": "ADC",
+  "schemaVersion": "3.19.0",
+  "id": "Service_Generic",
+  "Sample_misc_02_big": {
+      "class": "Tenant",
+      "inTouch_app": {
+          "class": "Application",
+          "template": "generic",
+          "inTouchcore.app.io_t80_vs": {
+              "class": "Service_Generic",
+              "virtualAddresses": [
+                  "192.0.2.140"
+              ],
+              "virtualPort": 80
+          },
+          "inTouchcore.app.io_t443_vs": {
+              "class": "Service_Generic",
+              "virtualAddresses": [
+                  "192.0.2.140"
+              ],
+              "virtualPort": 443
+          },
+          "inTouchcore.app.io_t8443_vs": {
+              "class": "Service_Generic",
+              "virtualAddresses": [
+                  "192.0.2.140"
+              ],
+              "virtualPort": 8443
+          }
+      }
+  }
+}
