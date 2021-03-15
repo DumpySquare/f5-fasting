@@ -1,11 +1,12 @@
-
+# FAST EXAMPLES
 
 ## Example POSTs to deploy example FAST templates
 
 Highlight the each json object in the vscode f5-fast extension, then `F1`, and select `F5-Fast: Deploy Fast App` to deploy the application
 
 ## simple_http
-```
+
+```json
 {
   "name": "examples/simple_http",
   "parameters": {
@@ -23,6 +24,8 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
 ```
 
 ## simple_http 2 - just a double of above
+
+```json
 {
   "name": "examples/simple_http",
   "parameters": {
@@ -39,8 +42,10 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
 }
 
 ## simple_https
-** still trying to get this working**
-```
+
+**still trying to get this working**
+
+```json
 {
   "name": "examples/simple_https",
   "parameters": {
@@ -58,6 +63,3 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
   }
 }
 ```
-
-
-

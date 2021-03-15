@@ -1,12 +1,13 @@
 
+# FAST work
 
 ## Example POSTs to deploy FAST apps in this folder
 
 Highlight the each json object in the vscode f5-fast extension, then `F1`, and select `F5-Fast: Deploy Fast App` to deploy the application
 
+## app1.mst - simple_http
 
-##  app1.mst - simple_http
-```
+```json
 {
   "name": "goodFastTemplates/app1",
   "parameters": {
@@ -24,7 +25,8 @@ Highlight the each json object in the vscode f5-fast extension, then `F1`, and s
 ```
 
 ## app2.mst - simple_tcp
-```
+
+```json
 {
   "name": "goodFastTemplates/app2",
   "parameters": {

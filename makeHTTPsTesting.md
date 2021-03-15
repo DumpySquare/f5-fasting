@@ -106,13 +106,12 @@ body:
 
 ### tmsh save sys config (all partitions)
 
-><POST> /mgmt/tm/sys/config  -d '{"command":"save","partition":"all"}'
-
 ```yaml
 url: /mgmt/tm/sys/config
 method: POST
 body:
   command: save
+  partition: all
 ```
 
 ---
@@ -122,7 +121,7 @@ body:
 The command will detect if the url has "http", if found, it considers it a fully qualified request destined for something outside of a device defined within the extension
 
 This is based off of NodeJS AXIOS request
-https://www.npmjs.com/package/axios#request-config
+<https://www.npmjs.com/package/axios#request-config>
 
 Default HTTP method = GET
 
