@@ -58,8 +58,14 @@ url: /mgmt/tm/sys/clock
 /mgmt/tm/sys/service/stats
 
 /mgmt/tm/sys/service/restnoded/stats
+/mgmt/tm/ltm/virtual/stats?expandSubcollections=true
 
-### url post in yaml
+/mgmt/tm/ltm/virtual?expandSubcollections=true
+
+/mgmt/tm/ltm/virtual
+/mgmt/tm/ltm/pool/~Common~bigiq.benlab.io_t443_pool?expandSubcollections=true
+
+### url post in yaml - login
 
 ```yaml
 url: /mgmt/shared/authn/login
