@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.11.0",
+  "class": "Device",
+  "async": true,
+  "Common": {
+    "class": "Tenant",
+    "systemClass": {
+      "class": "System",
+      "hostname": "bigip-tparty05.benlab.io",
+      "cliInactivityTimeout": 1200,
+      "consoleInactivityTimeout": 1200,
+      "autoPhonehome": false
+    },
+    "provisioningClass": {
+      "class": "Provision",
+      "ltm": "nominal"
+    },
+    "dnsClass": {
+      "class": "DNS",
+      "nameServers": [
+        "8.8.8.8",
+        "4.2.2.2"
+      ]
+    },
+    "ntpClass": {
+      "class": "NTP",
+      "servers": [
+        "0.pool.ntp.org",
+        "1.pool.ntp.org",
+        "2.pool.ntp.org"
+      ],
+      "timezone": "UTC"
+    },
+    "mySnmpAgent": {
+      "class": "SnmpAgent",
+      "contact": "helpdesk",
+      "location": "datacenter",
+      "allowList": [
+        "10.10.10.0/24",
+        "127.0.0.0/8"
+      ]
+    },
+    "mainSnmpCommunity": {
+      "class": "SnmpCommunity",
+      "name": "eaglesFly.",
+      "ipv6": false,
+      "source": "all",
+      "oid": ".1",
+      "access": "ro"
+    },
+    "syslog_1": {
+      "class": "SyslogRemoteServer",
+      "host": "10.10.10.150",
+      "remotePort": 514
+    },
+    "dbVariablesClass": {
+      "class": "DbVariables",
+      "ui.advisory.enabled": "true",
+      "ui.advisory.color": "red",
+      "ui.advisory.text": "...hostname...",
+      "ui.system.preferences.advancedselection": "advanced",
+      "ui.system.preferences.recordsperscreen": 1000,
+      "ui.system.preferences.startscreen": "welcome",
+      "provision.extramb": 2048,
+      "restjavad.useextramb": true
+    }
+  }
+}
