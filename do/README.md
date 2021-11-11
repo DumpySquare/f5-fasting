@@ -42,3 +42,22 @@
 ### manual properties inject
 
 Was able to manually open the ova as an archive and edit the .ovf file to add the propeties described here:  <https://clouddocs.f5.com/cloud/public/v1/vmware/vmware_setup.html#ova-properties-file-for-setting-management-ip-address-and-default-passwords>
+
+## DO BIG-IQ schema
+
+/var/config/rest/metadata/cm.global.declarative-onboarding-schema.declarativeonboardingschemastate.json
+/var/config/rest/metadata/cm.global.appsvcs-schema.appsvcsschemastate.json
+
+/cm/global/declarative-onboarding-schema
+/cm/global/appsvcs-schema
+
+/usr/share/java/rest/f5.rest.bigiq-schema.jar
+/usr/share/java/rest/libs/f5.rest.mcp.schema.jar
+
+/mgmt/shared/declarative-onboarding/info
+/mgmt/shared/appsvcs/info
+
+/usr/share/java/rest/f5.rest.bigiq-schema.jar
+/usr/share/java/rest/libs/f5.rest.mcp.schema.jar
+
+https://raw.githubusercontent.com/F5Networks/f5-declarative-onboarding/master/src/schema/latest/base.schema.json
