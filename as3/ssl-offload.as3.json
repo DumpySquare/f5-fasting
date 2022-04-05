@@ -1,0 +1,149 @@
+{
+    "$schema": "https://raw.githubusercontent.com/F5Networks/f5-appsvcs-extension/master/schema/latest/as3-schema.json",
+    "class": "AS3",
+    "declaration": {
+        "class": "ADC",
+        "schemaVersion": "3.25.0",
+        "id": "urn:uuid:37425742-fbfb-47d3-9a09-27166c0acba4",
+        "label": "Converted Declaration",
+        "remark": "ssl offload template",
+        "ssl_offload": {
+            "class": "Tenant",
+            "app_2": {
+                "class": "Application",
+                "template": "generic",
+                "app2_443_vs": {
+                    "class": "Service_HTTPS",
+                    "remark": "description!",
+                    "persistenceMethods": [
+                        {
+                            "bigip": "/Common/cookie"
+                        }
+                    ],
+                    "fallbackPersistenceMethod": {
+                        "bigip": "/Common/source_addr"
+                    },
+                    "profileTCP": {
+                        "bigip": "/Common/f5-tcp-progressive"
+                    },
+                    "layer4": "tcp",
+                    "profileAnalyticsTcp": {
+                        "use": "app2-tcp_analytics"
+                    },
+                    "profileAnalytics": {
+                        "use": "app2-HTTP-Analytics"
+                    },
+                    "pool": "app2_443_pool",
+                    "translateServerAddress": true,
+                    "translateServerPort": true,
+                    "virtualAddresses": [
+                        "172.24.80.217"
+                    ],
+                    "virtualPort": 443,
+                    "snat": {
+                        "use": "app2_443_snatpool"
+                    },
+                    "serverTLS": "app2_clientssl"
+                },
+                "app2_443_pool": {
+                    "remark": "descccc",
+                    "members": [
+                        {
+                            "addressDiscovery": "static",
+                            "servicePort": 80,
+                            "serverAddresses": [
+                                "172.24.61.217"
+                            ]
+                        }
+                    ],
+                    "monitors": [
+                        {
+                            "use": "app2_443_monitor"
+                        }
+                    ],
+                    "class": "Pool"
+                },
+                "app2_clientssl": {
+                    "class": "TLS_Server",
+                    "label": "simplest decl requires just cert",
+                    "certificates": [
+                        {
+                            "certificate": "app2_cert"
+                        }
+                    ]
+                },
+                "app2_cert": {
+                    "class": "Certificate",
+                    "certificate": {
+                        "bigip": "/Common/default.crt"
+                    },
+                    "privateKey": {
+                        "bigip": "/Common/default.key"
+                    }
+                },
+                "app2_443_snatpool": {
+                    "snatAddresses": [
+                        "172.24.80.217"
+                    ],
+                    "class": "SNAT_Pool"
+                },
+                "app2_443_monitor": {
+                    "adaptive": false,
+                    "interval": 5,
+                    "dscp": 0,
+                    "receive": "Kronos",
+                    "send": "GET /wfc/navigator/logon HTTP/1.1\\r\\nHost: app2.corp.cos.com\\r\\nUser-agent: Mozilla/5.0\\r\\nConnection: Close\\r\\n\\r\\n",
+                    "timeUntilUp": 0,
+                    "timeout": 16,
+                    "class": "Monitor",
+                    "monitorType": "http",
+                    "targetAddress": "",
+                    "targetPort": 0
+                },
+                "app2-HTTP-Analytics": {
+                    "capturedTrafficExternalLogging": false,
+                    "capturedTrafficInternalLogging": true,
+                    "collectGeo": true,
+                    "collectClientSideStatistics": true,
+                    "collectIp": true,
+                    "collectMaxTpsAndThroughput": true,
+                    "collectMethod": true,
+                    "collectOsAndBrowser": true,
+                    "collectPageLoadTime": true,
+                    "collectResponseCode": true,
+                    "collectSubnet": true,
+                    "collectUrl": true,
+                    "collectUserAgent": true,
+                    "collectUserSession": true,
+                    "collectedStatsExternalLogging": false,
+                    "collectedStatsInternalLogging": true,
+                    "remark": "none",
+                    "notificationByEmail": false,
+                    "notificationBySnmp": false,
+                    "notificationBySyslog": false,
+                    "publishIruleStatistics": false,
+                    "sessionCookieSecurity": "ssl-only",
+                    "sessionTimeoutMinutes": 5,
+                    "class": "Analytics_Profile",
+                    "captureFilter": {}
+                },
+                "app2-tcp_analytics": {
+                    "collectCity": true,
+                    "collectContinent": false,
+                    "collectCountry": true,
+                    "collectNexthop": true,
+                    "collectPostCode": true,
+                    "collectRegion": true,
+                    "collectRemoteHostIp": true,
+                    "collectRemoteHostSubnet": true,
+                    "collectedByClientSide": true,
+                    "collectedByServerSide": true,
+                    "collectedStatsExternalLogging": false,
+                    "collectedStatsInternalLogging": true,
+                    "remark": "none",
+                    "class": "Analytics_TCP_Profile"
+                }
+            }
+        }
+    }
+}
