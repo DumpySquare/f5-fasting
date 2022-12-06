@@ -1,0 +1,4956 @@
+{
+    "/openapi": {
+        "get": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/backup-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/backup-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/backups": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "body": {
+                "description": "Instance IDs of the BIG-IP Next instances to be backed up.",
+                "properties": {
+                    "instance_ids": {
+                        "type": "array",
+                        "items": {
+                            "format": "uuid",
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "instance_ids"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/backups/{file_name}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/deletion-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/deletion-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/discovery-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/discovery-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/groups": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "body": {
+                "properties": {
+                    "id": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "201": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/groups/{groupID}/devices/{instanceID}": {
+        "delete": {
+            "responses": {
+                "204": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/groups/{id}": {
+        "delete": {
+            "responses": {
+                "204": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "get": {
+            "responses": {
+                "200": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "put": {
+            "body": {
+                "properties": {
+                    "id": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/groups/{id}/devices": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "body": {
+                "properties": {
+                    "certificate_validated": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "certificate_validation_error": {
+                        "type": "string"
+                    },
+                    "certificate_validity": {
+                        "type": "boolean"
+                    },
+                    "hostname": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "mode": {
+                        "enum": [
+                            "STANDALONE",
+                            "HA"
+                        ],
+                        "type": "string"
+                    },
+                    "platform_type": {
+                        "description": "Specifies the platform of this BIG-IP Next instance.",
+                        "maxLength": 16,
+                        "type": "string"
+                    },
+                    "port": {
+                        "format": "int32",
+                        "type": "integer",
+                        "minimum": -2147483648,
+                        "maximum": 2147483647
+                    },
+                    "status": {
+                        "enum": [
+                            "HEALTHY",
+                            "UNHEALTHY",
+                            "UNKNOWN"
+                        ],
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "201": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/ha-creation-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/ha-creation-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/ha-failover-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/ha-failover-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/instances/authenticate": {
+        "post": {
+            "body": {
+                "description": "A BIG-IP Next instance authenticity request.",
+                "properties": {
+                    "address": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "format": "password",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "port": {
+                        "format": "int",
+                        "maximum": 65535,
+                        "minimum": 1,
+                        "type": "integer"
+                    },
+                    "username": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "address",
+                    "port",
+                    "username",
+                    "password"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "200": {
+                    "description": "A BIG-IP Next instance authenticity response.",
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "401": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/instances/{instanceID}/interfaces": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/instances/{instanceID}/trafficvlans": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "body": {
+                "properties": {
+                    "address": {
+                        "type": "string"
+                    },
+                    "device_group": {
+                        "type": "string"
+                    },
+                    "device_password": {
+                        "format": "password",
+                        "type": "string"
+                    },
+                    "device_user": {
+                        "type": "string"
+                    },
+                    "management_password": {
+                        "format": "password",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "management_user": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "port": {
+                        "format": "int32",
+                        "maximum": 2147483647,
+                        "minimum": -2147483648,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "address",
+                    "port",
+                    "device_user",
+                    "device_password",
+                    "management_user",
+                    "management_password"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}": {
+        "delete": {
+            "body": {
+                "properties": {
+                    "device_password": {
+                        "format": "password",
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "device_user": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "device_user",
+                    "device_password"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "get": {
+            "responses": {
+                "200": {
+                    "properties": {
+                        "address": {
+                            "title": "IP Address",
+                            "type": "string"
+                        },
+                        "certificate_validated": {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        "certificate_validation_error": {
+                            "type": "string"
+                        },
+                        "certificate_validity": {
+                            "type": "boolean"
+                        },
+                        "hostname": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "format": "uuid",
+                            "type": "string"
+                        },
+                        "mode": {
+                            "enum": [
+                                "STANDALONE",
+                                "HA"
+                            ],
+                            "type": "string"
+                        },
+                        "platform_type": {
+                            "description": "Specifies the platform of this BIG-IP Next instance.",
+                            "maxLength": 16,
+                            "type": "string"
+                        },
+                        "port": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        },
+                        "status": {
+                            "enum": [
+                                "HEALTHY",
+                                "UNHEALTHY",
+                                "UNKNOWN"
+                            ],
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/backup": {
+        "post": {
+            "body": {
+                "properties": {
+                    "file_name": {
+                        "type": "string"
+                    },
+                    "file_path": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/ha": {
+        "post": {
+            "body": {
+                "properties": {
+                    "auto_failback": {
+                        "default": false,
+                        "description": "Automatically restore operations to the original active node if it is available, or when it becomes available if it is not.",
+                        "title": "Auto Failback",
+                        "type": "boolean"
+                    },
+                    "cluster_management_ip": {
+                        "description": "The cluster IP address on management network.",
+                        "title": "Cluster Management IP",
+                        "type": "string"
+                    },
+                    "cluster_name": {
+                        "description": "Name of the BIG-IP Next HA instance.",
+                        "maxLength": 192,
+                        "type": "string"
+                    },
+                    "control_plane_vlan": {
+                        "description": "The VLAN used for high availability.",
+                        "required": [
+                            "name",
+                            "tag"
+                        ],
+                        "title": "HA VLAN",
+                        "type": "object",
+                        "properties": {
+                            "mtu": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "selfIps": {
+                                "type": "array",
+                                "items": {
+                                    "required": [
+                                        "address"
+                                    ],
+                                    "type": "object",
+                                    "properties": {
+                                        "address": {
+                                            "type": "string"
+                                        },
+                                        "instanceName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "tag": {
+                                "type": "integer"
+                            },
+                            "taggedInterfaces": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "untaggedInterfaces": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "data_plane_vlan": {
+                        "description": "The VLAN used for high availability.",
+                        "required": [
+                            "name",
+                            "tag"
+                        ],
+                        "title": "HA VLAN",
+                        "type": "object",
+                        "properties": {
+                            "mtu": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "selfIps": {
+                                "type": "array",
+                                "items": {
+                                    "required": [
+                                        "address"
+                                    ],
+                                    "type": "object",
+                                    "properties": {
+                                        "address": {
+                                            "type": "string"
+                                        },
+                                        "instanceName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "tag": {
+                                "type": "integer"
+                            },
+                            "taggedInterfaces": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "untaggedInterfaces": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "nodes": {
+                        "description": "The first item is the configuration for the active node in a BIG-IP Next HA instance. Subsequent items are for other nodes.",
+                        "maxItems": 2,
+                        "minItems": 2,
+                        "type": "array",
+                        "items": {
+                            "required": [
+                                "control_plane_address",
+                                "data_plane_primary_address"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "control_plane_address": {
+                                    "description": "The IP address and netmask of the node on control plane in a BIG-IP Next HA instance.",
+                                    "title": "HA Network Node IP with network mask",
+                                    "type": "string"
+                                },
+                                "data_plane_primary_address": {
+                                    "description": "Specifies the IP address and network mask used for state mirroring for a BIG-IP Next HA instance.",
+                                    "title": "Primary Mirror IP and network mask",
+                                    "type": "string"
+                                },
+                                "data_plane_secondary_address": {
+                                    "description": "Specifies the secondary IP address and network mask used for state mirroring between nodes in a BIG-IP Next HA instance.",
+                                    "title": "Secondary Mirror IP and network mask",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "The name of a BIG-IP Next instance. The maximum length is 192 characters.",
+                                    "maxLength": 192,
+                                    "title": "Name",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "standby_instance_id": {
+                        "description": "The UUID of a managed standalone BIG-IP Next instance that has been selected to become the standby node in a BIG-IP Next HA instance.",
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "traffic_vlan": {
+                        "type": "array",
+                        "items": {
+                            "required": [
+                                "name",
+                                "networkName",
+                                "selfIps"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "networkName": {
+                                    "type": "string"
+                                },
+                                "selfIps": {
+                                    "minItems": 3,
+                                    "type": "array",
+                                    "items": {
+                                        "required": [
+                                            "address",
+                                            "instanceName"
+                                        ],
+                                        "type": "object",
+                                        "properties": {
+                                            "address": {
+                                                "type": "string"
+                                            },
+                                            "instanceName": {
+                                                "enum": [
+                                                    "FLOATING-IP",
+                                                    "ACTIVE-NODE",
+                                                    "STANDBY-NODE"
+                                                ],
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "cluster_management_ip",
+                    "standby_instance_id",
+                    "data_plane_vlan",
+                    "control_plane_vlan",
+                    "nodes"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/ha/failover": {
+        "post": {
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/health": {
+        "get": {
+            "responses": {
+                "200": {
+                    "properties": {
+                        "id": {
+                            "format": "uuid",
+                            "type": "string"
+                        },
+                        "mode": {
+                            "enum": [
+                                "STANDALONE",
+                                "HA"
+                            ],
+                            "type": "string"
+                        },
+                        "node_count": {
+                            "title": "Number of Nodes",
+                            "type": "integer"
+                        },
+                        "nodes": {
+                            "type": "array",
+                            "items": {
+                                "required": [
+                                    "machine_id"
+                                ],
+                                "type": "object",
+                                "properties": {
+                                    "address": {
+                                        "type": "string"
+                                    },
+                                    "hostname": {
+                                        "type": "string"
+                                    },
+                                    "isHealthy": {
+                                        "type": "boolean"
+                                    },
+                                    "machine_id": {
+                                        "type": "string"
+                                    },
+                                    "port": {
+                                        "type": "integer"
+                                    },
+                                    "state": {
+                                        "enum": [
+                                            "ACTIVE",
+                                            "STANDBY",
+                                            "STANDALONE",
+                                            "UNREACHABLE"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "system_id": {
+                                        "type": "string"
+                                    },
+                                    "version": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "status": {
+                            "enum": [
+                                "HEALTHY",
+                                "UNHEALTHY",
+                                "UNKNOWN"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/restore": {
+        "post": {
+            "body": {
+                "properties": {
+                    "file_name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "file_name"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/upgrade": {
+        "post": {
+            "body": {
+                "oneOf": [
+                    {
+                        "required": [
+                            "image_name",
+                            "partition_address",
+                            "partition_password",
+                            "partition_port",
+                            "partition_user",
+                            "tenant_name",
+                            "upgrade_type"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "image_name": {
+                                "type": "string"
+                            },
+                            "upgrade_type": {
+                                "type": "string"
+                            },
+                            "partition_address": {
+                                "type": "string"
+                            },
+                            "partition_password": {
+                                "type": "string"
+                            },
+                            "partition_port": {
+                                "type": "integer"
+                            },
+                            "partition_user": {
+                                "type": "string"
+                            },
+                            "tenant_name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "required": [
+                            "image_name",
+                            "signature_name",
+                            "upgrade_type"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "image_name": {
+                                "type": "string"
+                            },
+                            "upgrade_type": {
+                                "type": "string"
+                            },
+                            "signature_name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "202": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/inventory/{id}/validate-cert": {
+        "post": {
+            "responses": {
+                "200": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/types": {
+        "get": {
+            "responses": {
+                "200": {
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "type": "array",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/velos": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "body": {
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "partition_address": {
+                        "type": "string"
+                    },
+                    "partition_password": {
+                        "type": "string"
+                    },
+                    "partition_port": {
+                        "type": "integer"
+                    },
+                    "partition_user": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "type",
+                    "name",
+                    "partition_address",
+                    "partition_port",
+                    "partition_user",
+                    "partition_password"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "201": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/velos/authenticate": {
+        "post": {
+            "body": {
+                "properties": {
+                    "partition_address": {
+                        "type": "string"
+                    },
+                    "partition_password": {
+                        "type": "string"
+                    },
+                    "partition_port": {
+                        "type": "integer"
+                    },
+                    "partition_user": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "partition_address",
+                    "partition_port",
+                    "partition_user",
+                    "partition_password"
+                ],
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "204": {},
+                "401": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/velos/{id}": {
+        "delete": {
+            "responses": {
+                "204": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "put": {
+            "body": {
+                "properties": {
+                    "id": {
+                        "format": "uuid",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "partition_address": {
+                        "type": "string"
+                    },
+                    "partition_port": {
+                        "type": "number"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-04/schema#"
+            },
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/velos/{id}/images": {
+        "get": {
+            "responses": {
+                "200": {
+                    "properties": {
+                        "images": {
+                            "type": "object"
+                        }
+                    },
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/providers/velos/{id}/tenants": {
+        "get": {
+            "responses": {
+                "200": {
+                    "properties": {
+                        "tenants": {
+                            "type": "object"
+                        }
+                    },
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/proxy-file-upload/{id}": {
+        "post": {
+            "body": {},
+            "responses": {
+                "202": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/proxy/{id}": {
+        "delete": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "get": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "patch": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "post": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        },
+        "put": {
+            "responses": {
+                "200": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/restore-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/restore-tasks/{id}": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/upgrade-tasks": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "501": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/version": {
+        "get": {
+            "responses": {
+                "200": {},
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/vlans/controlplane": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    },
+    "/v1/vlans/dataplane": {
+        "get": {
+            "responses": {
+                "200": {},
+                "400": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "403": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "404": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                },
+                "default": {
+                    "properties": {
+                        "message": {
+                            "type": "string"
+                        },
+                        "status": {
+                            "format": "int32",
+                            "type": "integer",
+                            "minimum": -2147483648,
+                            "maximum": 2147483647
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "message"
+                    ],
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-04/schema#"
+                }
+            }
+        }
+    }
+}

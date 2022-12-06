@@ -1,0 +1,9 @@
+{
+    "$schema": "./1.json",
+    "address": "10.1.1.7",
+    "port": 5443,
+    "device_user": "admin",
+    "device_password": "whos-clues",
+    "management_user": "admin-cm",
+    "management_password": "blues-clues"
+}

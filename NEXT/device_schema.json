@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "required": [
+        "class",
+        "address",
+        "port",
+        "device_user",
+        "device_password",
+        "management_user",
+        "management_password"
+    ],
+    "properties": {
+        "class": {
+            "type":"string"
+        },
+        "address": {
+            "type": "string"
+        },
+        "device_group": {
+            "type": "string"
+        },
+        "device_password": {
+            "format": "password",
+            "type": "string"
+        },
+        "device_user": {
+            "type": "string"
+        },
+        "management_password": {
+            "format": "password",
+            "minLength": 1,
+            "type": "string"
+        },
+        "management_user": {
+            "minLength": 1,
+            "type": "string"
+        },
+        "port": {
+            "format": "int32",
+            "maximum": 49150,
+            "minimum": 80,
+            "type": "integer"
+        }
+    }
+}
