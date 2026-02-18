@@ -1,0 +1,43 @@
+title: Simple UDP Application
+description: Simple UDP load balancer using the same port on client and server side.
+parameters:
+  tenant_name: foo
+  port: 88
+  pool_members:
+    - name: fqdn.serversite1.com
+      addressDiscovery: "fqdn"
+      hostname: fqdn.serversite1.com
+      port: "80"
+    - name: fqdn.serversite2.com
+      addressDiscovery: "fqdn"
+      hostname: fqdn.serversite2.com
+      port: "80"
+    - name: artifact-server1
+      address: 10.20.10.45
+      port: "80"
+    - name: artifact-server2
+      address: 10.20.10.46
+      port: "80"
+template: |
+  {
+    "members": [
+      {{#pool_members}}
+        {
+          "serverAddress": "{{address}}",
+          "addressDiscovery": "{{addressDiscovery}}",
+          "hostname": "{{hostname}}",
+          "port": "{{port}}",
+        },
+      {{/pool_members}}
+      ],
+      persistence: "NSPERSISTENECE"
+  }
+
+# {{#opts}}
+#   {{#isSourceIP}}
+#     This is Source
+#   {{/isSourceIP}}
+#   {{#isOther}}
+#     This is some other method
+#   {{/isOther}}
+# {{/opts}}
